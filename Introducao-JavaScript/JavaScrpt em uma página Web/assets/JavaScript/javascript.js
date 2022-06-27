@@ -10,9 +10,6 @@ function increment(){
 function decrement(){
     currentNumber = currentNumber - 1;
     currentNumberWraper.innerHTML = currentNumber
-    if( currentNumber >= 0){
-        color = red; 
-    }
 }
 
 
