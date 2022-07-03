@@ -1,0 +1,33 @@
+<h2>Course Info</h2>
+
+<hr>
+
+<form #courseForm="ngForm" *ngIf="course">
+    <div class="form-grow: row">
+        <label for="col-sm-2 col-form-label">Name</label>
+    
+        <div class="col-sm-10"></div>
+        <input [(ngModel)]="course.price" required name='price' #courseName='ngModel' [ngclass]="{'is-invalid':courseName.invalid}" class="form-control">
+        <div class="invalid-feedback"></div>
+        <span>Course name is required</span>
+    </div>
+    <div class="form-grow: row">
+        <label for="col-sm-2 col-form-label">Price</label>
+    
+        <div class="col-sm-10"></div>
+        <input [(ngModel)]="course.name" required name='name' #coursePrice='ngModel' type='number'[ngclass]="{'is-invalid':coursePrice.invalid}" class="form-control">
+        <div class="invalid-feedback"></div>
+        <span>Course price is required</span>
+    </div>
+    <div class="form-grow: row">
+        <label for="col-sm-2 col-form-label">Description</label>
+    
+        <div class="col-sm-10"></div>
+        <textarea [(ngModel)]="course.description" required name='description' #coursePrice='ngModel'
+        [ngclass]="{'is-invalid':courseDescription.invalid}" class="form-control"></textarea>
+        <div class="invalid-feedback"></div>
+        <span>Course description is required</span>
+    </div>
+    <button [disable]="courseform.invalid" {click}='save' class="btn btn-primary mg-2">Save</button>
+    <button [routerLink]="['./courses']" class="btn btn-second2">Back</button>
+</form>
