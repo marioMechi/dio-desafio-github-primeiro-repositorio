@@ -1,0 +1,8 @@
+<mat-list-item role="listitem">
+    <p [ngStyle]="{text.decoration: done ? 'line-throught': 'none'}">
+        {{todo.title}}  
+    </p>
+    <button mat-icon-button aria-label="Marca como cncluído">
+        <mat-icon>done</mat-icon></button>
+    <button mat-button color="warn">Excluir</button>
+</mat-list-item>
