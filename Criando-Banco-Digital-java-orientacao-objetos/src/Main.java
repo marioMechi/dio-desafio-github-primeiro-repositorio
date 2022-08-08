@@ -39,6 +39,8 @@ public class Main {
 		
 		ee.imprirExtrato();
 		poupanca2.imprirExtrato();
+		
+		imprimirListaClientes();
 	}
 
 }
